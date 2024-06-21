@@ -7,3 +7,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-clip-path {
+  clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.hero-circle {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}

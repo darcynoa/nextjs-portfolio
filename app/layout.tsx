@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import localFont from "next/font/local";
 import Navbar from "./components/Navbar";
+import "./globals.css";
 
 const noah = localFont({
   src: [
@@ -44,7 +44,7 @@ export default function RootLayout({
     <html lang="en" className="text-[10px]">
       <body className={`${noah.className} bg-primary text-secondary`}>
         <Navbar />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
