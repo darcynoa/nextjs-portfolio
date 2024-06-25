@@ -1,0 +1,29 @@
+{
+  "format": "custom",
+  "id": "case_study_page",
+  "label": "Case Study Page",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "Case Study UID",
+          "placeholder": "title of case study"
+        },
+        "type": "UID"
+      },
+      "case_study_title": {
+        "type": "Text",
+        "config": {
+          "label": "Case Study Title",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone"
+      }
+    }
+  }
+}

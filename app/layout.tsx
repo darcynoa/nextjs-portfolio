@@ -3,6 +3,9 @@ import localFont from "next/font/local";
 import Navbar from "./components/Navbar";
 import "./globals.css";
 
+import { PrismicPreview } from "@prismicio/next";
+import { repositoryName } from "@/prismicio";
+
 const noah = localFont({
   src: [
     {
@@ -45,6 +48,7 @@ export default function RootLayout({
       <body className={`${noah.className} bg-primary text-secondary`}>
         <Navbar />
         <main>{children}</main>
+        <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>
   );
