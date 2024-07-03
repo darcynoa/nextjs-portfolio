@@ -156,7 +156,7 @@ export default function Work() {
         >
           <Image
             ref={workImage}
-            src="/images/homepage/adopt-hero-scaled.jpg"
+            src="/images/homepage/ccc-hero.jpg"
             alt="The kitties are so cute there :)"
             width={2560}
             height={1707}
