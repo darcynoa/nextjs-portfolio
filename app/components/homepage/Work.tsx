@@ -8,9 +8,9 @@ import Link from "next/link";
 
 export default function Work() {
   const work = useRef(null);
-  const carousel = useRef(null);
+  const carousel = useRef<HTMLAnchorElement | null>(null);
   const workImage = useRef(null);
-  const workLink = useRef(null);
+  const workLink = useRef<HTMLAnchorElement | null>(null);
   const workHeader = useRef(null);
   const blurbRow = useRef(null);
   const circleMotif = useRef(null);
@@ -94,11 +94,11 @@ export default function Work() {
 
         workHoverTimeline.pause();
 
-        carousel.current.addEventListener("mouseenter", () => {
+        carousel.current!.addEventListener("mouseenter", () => {
           workHoverTimeline.play();
         });
 
-        carousel.current.addEventListener("mouseleave", () => {
+        carousel.current!.addEventListener("mouseleave", () => {
           workHoverTimeline.reverse();
         });
 
@@ -114,11 +114,11 @@ export default function Work() {
 
         workLinkTimeline.pause();
 
-        workLink.current.addEventListener("mouseenter", () => {
+        workLink.current!.addEventListener("mouseenter", () => {
           workLinkTimeline.play();
         });
 
-        workLink.current.addEventListener("mouseleave", () => {
+        workLink.current!.addEventListener("mouseleave", () => {
           workLinkTimeline.reverse();
         });
       });
