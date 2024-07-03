@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .title {
+    @apply font-sans font-bold text-[5rem] md:text-[7rem] 2xl:text-[12rem] uppercase tracking-[1.5px] leading-tight;
+  }
+
+  .title-secondary {
+    @apply font-sans font-bold text-[4rem] md:text-[7rem] xl:text-[9rem] 2xl:text-[12rem] uppercase tracking-[1.5px] leading-tight;
+  }
+
+  .blurb {
+    @apply font-sans text-[1.6rem] lg:text-[2rem] tracking-[1.5px] leading-tight w-[80%] md:w-[60%] lg:w-[60rem];
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +24,4 @@
 
 ::-webkit-scrollbar {
   display: none;
-}
-
-.hero-clip-path {
-  clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 0% 100%);
-}
-
-.hero-circle {
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }

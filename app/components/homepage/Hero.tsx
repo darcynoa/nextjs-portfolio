@@ -9,7 +9,7 @@ export default function Hero() {
   const hero = useRef(null);
   const image = useRef(null);
   const circle = useRef(null);
-  const header = useRef(null);
+  const title = useRef(null);
   const blurb = useRef(null);
 
   useGSAP(
@@ -23,7 +23,7 @@ export default function Hero() {
         clipPath: "polygon(100% 100%, 100% 100%, 100% 100%, 0% 100%)",
       });
 
-      gsap.set([header.current, blurb.current], {
+      gsap.set([title.current, blurb.current], {
         opacity: 0,
         y: "7rem",
       });
@@ -42,7 +42,7 @@ export default function Hero() {
           delay: 0.2,
           ease: "expo.in",
         })
-        .to(header.current, {
+        .to(title.current, {
           y: 0,
           opacity: 1,
           duration: 1,
@@ -76,16 +76,10 @@ export default function Hero() {
         />
       </div>
       <div className="relative pl-[2rem] lg:pl-[21.2rem] z-10 mb-[4.5rem] flex flex-col gap-[10rem] -mt-[4rem] md:-mt-[14rem] 2xl:-mt-[28rem]">
-        <h1
-          ref={header}
-          className="font-sans font-bold text-[5rem] md:text-[7rem] 2xl:text-[12rem] uppercase tracking-[1.5px] leading-tight"
-        >
+        <h1 ref={title} className="title">
           Dope web experiences
         </h1>
-        <p
-          ref={blurb}
-          className="font-sans text-[1.6rem] lg:text-[2rem] tracking-[1.5px] leading-tight w-[80%] md:w-[60%] lg:w-[60rem] translate-y-28"
-        >
+        <p ref={blurb} className="blurb">
           It&apos;s my passion to create smooth and visually appealing web
           experiences, check some of them out below!
         </p>
